@@ -1,10 +1,4 @@
 import Head from 'next/head'
-import { NextPage } from 'next'
-
-// export const getServerSideProps = async () => {
-//   const resp = await fetch('/api/hello')
-//   return { props: { ...resp } }
-// }
 
 const Index = ({}) => {
   return (

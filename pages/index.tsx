@@ -6,7 +6,7 @@ import { NextPage } from 'next'
 //   return { props: { ...resp } }
 // }
 
-const Index = ({ resp }) => {
+const Index = ({}) => {
   return (
     <div>
       <Head>

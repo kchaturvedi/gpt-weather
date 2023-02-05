@@ -8,7 +8,8 @@ const handler = async (req: Request) => {
   const ipRes = await fetch(`https://api.weatherapi.com/v1/ip.json?q=${ip}&key=${process.env.OPEN_WEATHER_KEY}`)
   const location = await ipRes.json()
   const { lat, lon } = location
-  const forecastRes = await fetch(`https://api.weatherapi.com/v1/forecast.json?q=${lat},${lon}&key=${process.env.OPEN_WEATHER_KEY}`)
+  // const forecastRes = await fetch(`https://api.weatherapi.com/v1/forecast.json?q=${lat},${lon}&key=${process.env.OPEN_WEATHER_KEY}`)
+  const forecastRes = await fetch(`https://api.weatherapi.com/v1/forecast.json?q=london&key=${process.env.OPEN_WEATHER_KEY}`)
   const forecast = await forecastRes.json()
 
   const { condition, wind_kph, wind_dir, temp_c, feelslike_c, cloud, humidity, uv, gust_kph, precip_mm } = forecast.current

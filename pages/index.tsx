@@ -22,9 +22,11 @@ const Index = ({}) => {
       <Head>
         <title>GPT Weather</title>
       </Head>
-      <div className='flex flex-col items-center justify-center max-w-4xl py-2'>
-        <h1 className='text-3xl font-bold'>GPT Weather</h1>
-        <p>{isLoading ? 'Loading...' : weather}</p>
+      <div>
+        <div className='h-full flex flex-col items-center justify-center max-w-4xl p-10 mx-auto'>
+          <h1 className='text-3xl font-bold text-white pb-5'>GPT Weather</h1>
+          <p className='text-white'>{isLoading ? 'Loading...' : weather}</p>
+        </div>
       </div>
     </div>
   )

@@ -12,6 +12,7 @@ const handler = async (req: Request) => {
   const forecast = await forecastRes.json()
 
   const { condition, wind_kph, wind_dir, temp_c, feelslike_c, cloud, humidity, uv, gust_kph, precip_mm } = forecast.current
+  console.log(ip, location, forecast)
 
   const prompt = `Write a concise but friendly weather report using the following weather conditions. Be sure to mention the location of the weather report. Denote all temperatures in celsius and wind and gust speeds in kph. Sentiment should be optimistic, especially when conditions are cloudly, rainy, or if there is a lot of percipitation. Current conditions in ${forecast.location.name}, ${forecast.location.region}: ${condition.text}, winds ${wind_kph} from ${wind_dir}, with gusts upto ${gust_kph}. Temperature is ${temp_c}, feels like ${feelslike_c}, with ${humidity}% humidity. End with a weather-related pun or inspirational quote.`
 

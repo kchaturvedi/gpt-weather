@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org/) app integrating WeatherAPI and GPT-3 to generate a simple weather forecast for your location.
+## DEMO -> [https://gpt-weather-e47v.vercel.app](https://gpt-weather-e47v.vercel.app)
+
+This is a Next.js app integrating WeatherAPI and GPT-3 to generate a simple weather forecast for your location.
 
 Using Vercel Edge Functions, your IP address is used to derive your approximate location. This location is used to fetch the weather conditions. Finally, that information is fed into a prompt for GPT-3 to generate a friendly weather report.
 
